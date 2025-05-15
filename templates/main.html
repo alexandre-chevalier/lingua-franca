@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="static\css\main.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Traduction</h1>
-    <form>
-        
-    </form>
+    <div>
+        <form>
+            <textarea>
+
+            </textarea>
+            <select name="language" id="select_lang">
+                {% for lang in language %}
+                <option value="{{lang.code}}"">
+                    {{lang.name}}
+                </option>
+                {% endfor %}
+            </select>
+            <input type="button" value="Translate">
+         </form>
+    </div>
 </body>
 </html>

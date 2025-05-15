@@ -1,0 +1,12 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+div{
+    width:100%;
+}
+textarea{
+    width:350px;
+    height: 150px;
+}
