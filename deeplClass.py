@@ -1,9 +1,14 @@
 import deepl 
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 class DeeplClass:
+ 
     def __init__(self):
-        self.translator = deepl.Translator("e5b8191a-9b27-41de-928b-85e3fd9fd0a1:fx")
+        api_key = os.getenv("DEEPL_API_KEY")
+        self.translator = deepl.Translator(api_key)
     
     def retrieve_language(self):
         langage = self.translator.get_source_languages()
