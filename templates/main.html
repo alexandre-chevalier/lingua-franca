@@ -9,10 +9,8 @@
 <body>
     <h1>Traduction</h1>
     <div>
-        <form>
-            <textarea>
-
-            </textarea>
+        <form id="form">
+            <textarea id="text_to_translate"></textarea>
             <select name="language" id="select_lang">
                 {% for lang in language %}
                 <option value="{{lang.code}}"">
@@ -20,8 +18,11 @@
                 </option>
                 {% endfor %}
             </select>
-            <input type="button" value="Translate">
+            <input type="submit" value="Translate">
          </form>
+         <p id="output"></p> 
     </div>
+
+    <script src="static\js\main.js"></script>
 </body>
 </html>

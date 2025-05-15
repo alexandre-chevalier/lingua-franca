@@ -1,5 +1,5 @@
 import deepl 
-import requests
+
 
 class DeeplClass:
     def __init__(self):
@@ -16,5 +16,8 @@ class DeeplClass:
     
     def translate_language(self, text, lang):
         result= self.translator.translate_text(text, target_lang=f"{lang}")
+        return result.text
+    
+
 
 
