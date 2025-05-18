@@ -13,6 +13,8 @@ def main_page():
 def traitement_requetes():
     text = request.form.get('texte')
     lang = request.form.get('lang')
+    if lang == "EN":
+        lang = "EN-GB"
     translate_language = deepl_trans.translate_language(text, lang)
     return jsonify({"message": translate_language})
 

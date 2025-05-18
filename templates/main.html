@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="static\css\main.css" rel="stylesheet" />
+    <title>Lingua Franca</title>
+    <link href="static/css/main.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>Traduction</h1>
-    <div>
-        <form id="form">
-            <textarea id="text_to_translate"></textarea>
-            <select name="language" id="select_lang">
-                {% for lang in language %}
-                <option value="{{lang.code}}"">
-                    {{lang.name}}
-                </option>
-                {% endfor %}
-            </select>
-            <input type="submit" value="Translate">
-         </form>
-         <p id="output"></p> 
-    </div>
+<body>  
+    <nav>
+        <div class="nav-content">
+            <h1>Welcome to our translator</h1>
+            <p>(Zak, Sewa, Alexandre)</p>
+        </div>
+    </nav>
 
-    <script src="static\js\main.js"></script>
+    <main>
+        <div class="translator-container">
+            <h2>Traduction</h2>
+            <form id="form">
+                <textarea id="text_to_translate" placeholder="Enter text to translate..."></textarea>
+                <select name="language" id="select_lang">
+                    {% for lang in language %}
+                    <option value="{{lang.code}}">
+                        {{lang.name}}
+                    </option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Translate">
+            </form>
+            <p id="output"></p> 
+        </div>
+    </main>
+
+    <script src="static/js/main.js"></script>
 </body>
 </html>
